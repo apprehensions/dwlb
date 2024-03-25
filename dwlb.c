@@ -701,7 +701,6 @@ pointer_frame(void *data, struct wl_pointer *pointer)
 		} else {
 			/* Clicked on status */
 			for (i = 0; i < seat->bar->status.buttons_l; i++) {
-			
 				if (seat->pointer_button == seat->bar->status.buttons[i].btn
 				    && seat->pointer_x >= status_x + seat->bar->textpadding + seat->bar->status.buttons[i].x1 / buffer_scale
 				    && seat->pointer_x < status_x + seat->bar->textpadding + seat->bar->status.buttons[i].x2 / buffer_scale) {
@@ -1400,7 +1399,6 @@ parse_into_customtext(CustomText *ct, char *text)
 		if (scrolldown_button)
 			scrolldown_button->x2 = x;
 	
-		
 		ct->text[str_pos] = '\0';
 	} else {
 		snprintf(ct->text, sizeof ct->text, "%s", text);
